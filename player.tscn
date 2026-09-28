@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://7tw8uuqfatk6" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="AudioStream" uid="uid://ba7sdht2vvxbu" path="res://sfxs/death-explosion.ogg" id="2_i3pqv"]
 [ext_resource type="AudioStream" uid="uid://bhc5mxsf732by" path="res://sfxs/success.ogg" id="3_hqtel"]
+[ext_resource type="AudioStream" uid="uid://dcxoi0rwfqs7l" path="res://sfxs/main-engine-thrust.ogg" id="4_hqtel"]
+[ext_resource type="PackedScene" uid="uid://jfwajmrh6ca7" path="res://particles/success_particles.tscn" id="6_1jxqw"]
+[ext_resource type="PackedScene" uid="uid://bw3qa56n8ogme" path="res://particles/booster_particles.tscn" id="7_1jxqw"]
+[ext_resource type="PackedScene" uid="uid://dcecb8hw7dbrv" path="res://particles/explosion_particles.tscn" id="7_dw050"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_hqtel"]
 
@@ -29,5 +33,21 @@ stream = ExtResource("2_i3pqv")
 
 [node name="SuccessAudio" type="AudioStreamPlayer" parent="." unique_id=1488356720]
 stream = ExtResource("3_hqtel")
+
+[node name="RocketAudio" type="AudioStreamPlayer3D" parent="." unique_id=193239569]
+stream = ExtResource("4_hqtel")
+
+[node name="SuccessParticles" parent="." unique_id=1424383757 instance=ExtResource("6_1jxqw")]
+
+[node name="ExplosionParticles" parent="." unique_id=625556262 instance=ExtResource("7_dw050")]
+
+[node name="BoosterParticles" parent="." unique_id=675637703 instance=ExtResource("7_1jxqw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="LeftBoosterParticles" parent="." unique_id=176433586 instance=ExtResource("7_1jxqw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, -1, 0)
+
+[node name="RightBoosterParticles" parent="." unique_id=1897387114 instance=ExtResource("7_1jxqw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -1, 0)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://ktpumsq3ime7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jfg3o"]
+albedo_color = Color(0.4, 0.26933333, 0.176, 1)
+
+[node name="Floor" type="CSGBox3D" unique_id=1505398175 groups=["Hazard"]]
+use_collision = true
+size = Vector3(30, 8, 5)
+material = SubResource("StandardMaterial3D_jfg3o")
+
+[node name="Wall" type="CSGBox3D" parent="." unique_id=682288588]
+transform = Transform3D(0.98480374, -0.17367108, 0, 0.17367108, 0.98480374, 0, 0, 0, 1, -11.806795, 6.2429156, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_jfg3o")
+
+[node name="Wall2" type="CSGBox3D" parent="." unique_id=2029370811]
+transform = Transform3D(0.85182273, 0.5238302, 0, -0.5238302, 0.85182273, 0, 0, 0, 1, -11.335848, 13.809521, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_jfg3o")
+
+[node name="Wall3" type="CSGBox3D" parent="." unique_id=372835141]
+transform = Transform3D(0.9619752, 0.27313688, 0, -0.27313688, 0.9619752, 0, 0, 0, 1, 13.290102, 7.932973, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_jfg3o")
+
+[node name="Wall4" type="CSGBox3D" parent="." unique_id=2091720100]
+transform = Transform3D(0.8330411, -0.553211, 0, 0.553211, 0.8330411, 0, 0, 0, 1, 13.290102, 15.692256, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_jfg3o")
+
+[node name="Ceiling" type="CSGBox3D" parent="." unique_id=811059240]
+transform = Transform3D(-0.19813058, 0.9801757, 0, -0.9801757, -0.19813058, 0, 0, 0, 1, -7.574478, 18.225029, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_jfg3o")
+
+[node name="Ceiling2" type="CSGBox3D" parent="." unique_id=1522466651]
+transform = Transform3D(-0.19813058, 0.9801757, 0, -0.9801757, -0.19813058, 0, 0, 0, 1, 0.8809128, 19.167953, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_jfg3o")
+
+[node name="Ceiling3" type="CSGBox3D" parent="." unique_id=133854408]
+transform = Transform3D(0.323571, 0.94620395, 0, -0.94620395, 0.323571, 0, 0, 0, 1, 7.0204926, 18.925285, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_jfg3o")
+
+[node name="Background" type="CSGBox3D" parent="." unique_id=1776707533]
+transform = Transform3D(0.9234548, -0.16285212, 0.3474338, 0.17367105, 0.9848037, 0, -0.3421541, 0.060339194, 0.9377045, -8.033796, 5.2021074, -5.1903224)
+size = Vector3(3, 10, 3)
+material = SubResource("StandardMaterial3D_jfg3o")
+
+[node name="Background2" type="CSGBox3D" parent="." unique_id=1937683137]
+transform = Transform3D(0.7888738, -0.5373975, -0.29813105, 0.5410706, 0.83737874, -0.07771406, 0.29141194, -0.100003436, 0.95135623, 0.78615713, 2.5039892, -6.050853)
+size = Vector3(3, 10, 3)
+material = SubResource("StandardMaterial3D_jfg3o")
+
+[node name="Background3" type="CSGBox3D" parent="." unique_id=109989302]
+transform = Transform3D(0.903939, 0.4022361, -0.14526159, -0.32526606, 0.8671625, 0.37713584, 0.27766287, -0.29365915, 0.91469586, 9.62866, 5.0101323, -7.0485787)
+size = Vector3(3, 10, 3)
+material = SubResource("StandardMaterial3D_jfg3o")
+
+[node name="Background4" type="CSGBox3D" parent="." unique_id=396634750]
+transform = Transform3D(0.7815933, 0.62266934, -0.037353393, -0.5585835, 0.7252914, 0.40241408, 0.27766287, -0.29365915, 0.91469574, 12.83227, 16.845959, -5.000764)
+size = Vector3(3, 10, 3)
+material = SubResource("StandardMaterial3D_jfg3o")
+
+[node name="Background5" type="CSGBox3D" parent="." unique_id=902443623]
+transform = Transform3D(0.91396934, -0.40535358, 0.018674731, 0.3966848, 0.9022199, 0.16923706, -0.08544949, -0.1472697, 0.9853988, -3.1128821, 3.7277665, -7.7551117)
+size = Vector3(3, 10, 3)
+material = SubResource("StandardMaterial3D_jfg3o")
+
+[node name="Background6" type="CSGBox3D" parent="." unique_id=1584500111]
+transform = Transform3D(0.9723931, -0.2278712, 0.05026603, 0.21714154, 0.96249014, 0.16267532, -0.08544948, -0.14726968, 0.9853988, -2.2283235, 17.848736, -6.6748524)
+size = Vector3(3, 10, 3)
+material = SubResource("StandardMaterial3D_jfg3o")

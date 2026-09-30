@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b4ebypukt371f"]
 
 [ext_resource type="Script" uid="uid://7tw8uuqfatk6" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Material" uid="uid://b0pc4x17oo3br" path="res://ship-red-material.tres" id="2_dw050"]
 [ext_resource type="AudioStream" uid="uid://ba7sdht2vvxbu" path="res://sfxs/death-explosion.ogg" id="2_i3pqv"]
 [ext_resource type="AudioStream" uid="uid://bhc5mxsf732by" path="res://sfxs/success.ogg" id="3_hqtel"]
 [ext_resource type="AudioStream" uid="uid://dcxoi0rwfqs7l" path="res://sfxs/main-engine-thrust.ogg" id="4_hqtel"]
@@ -62,38 +63,47 @@ script = ExtResource("1_4flbx")
 
 [node name="Body" type="MeshInstance3D" parent="." unique_id=2029248733]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+material_override = ExtResource("2_dw050")
 mesh = SubResource("CylinderMesh_xgomg")
 
 [node name="Cockpit" type="MeshInstance3D" parent="Body" unique_id=2065973215]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = ExtResource("2_dw050")
 mesh = SubResource("CylinderMesh_jfg3o")
 
 [node name="Midriff" type="MeshInstance3D" parent="Body" unique_id=1870056442]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+material_override = ExtResource("2_dw050")
 mesh = SubResource("CylinderMesh_1jxqw")
 
 [node name="Thruster" type="MeshInstance3D" parent="Body" unique_id=1354970252]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.55, 0)
+material_override = ExtResource("2_dw050")
 mesh = SubResource("CylinderMesh_hyhnv")
 
 [node name="LeftArm" type="MeshInstance3D" parent="Body" unique_id=2073628901]
 transform = Transform3D(0.64278764, 0.76604444, 0, -0.76604444, 0.64278764, 0, 0, 0, 1, -0.26, -0.19, 0)
+material_override = ExtResource("2_dw050")
 mesh = SubResource("BoxMesh_jfg3o")
 
 [node name="Thruster" type="MeshInstance3D" parent="Body/LeftArm" unique_id=115636133]
 transform = Transform3D(0.69465864, -0.7193399, 0, 0.7193399, 0.69465864, 0, 0, 0, 1, 0.09, -0.3, 0)
+material_override = ExtResource("2_dw050")
 mesh = SubResource("CylinderMesh_or4ng")
 
 [node name="RightArm" type="MeshInstance3D" parent="Body" unique_id=1814995171]
 transform = Transform3D(0.64278764, -0.76604444, 0, 0.76604444, 0.64278764, 0, 0, 0, 1, 0.26, -0.19, 0)
+material_override = ExtResource("2_dw050")
 mesh = SubResource("BoxMesh_1jxqw")
 
 [node name="Thruster" type="MeshInstance3D" parent="Body/RightArm" unique_id=1177112023]
 transform = Transform3D(0.69465864, 0.7193399, 0, -0.7193399, 0.69465864, 0, 0, 0, 1, -0.09, -0.3, 0)
+material_override = ExtResource("2_dw050")
 mesh = SubResource("CylinderMesh_dw050")
 
 [node name="BaseRing" type="MeshInstance3D" parent="Body" unique_id=2090973724]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+material_override = ExtResource("2_dw050")
 mesh = SubResource("TorusMesh_jfg3o")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1495232109]

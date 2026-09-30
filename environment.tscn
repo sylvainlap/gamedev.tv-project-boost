@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://tp1vp2slsqoe"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5xgho"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_u52ul"]
+sky_material = SubResource("ProceduralSkyMaterial_5xgho")
+
+[sub_resource type="Environment" id="Environment_vonw3"]
+background_mode = 1
+background_color = Color(0.07058824, 0.043137256, 0.02745098, 1)
+sky = SubResource("Sky_u52ul")
+ambient_light_source = 3
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Environment" type="Node" unique_id=229387685]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=902853841]
+transform = Transform3D(1, 0, 0, 0, 0.9975641, 0.06975647, 0, -0.06975647, 0.9975641, 0, 6, 10)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=227098457]
+transform = Transform3D(0.9848078, -0.111618906, 0.13302222, 0, 0.7660445, 0.6427876, -0.1736482, -0.63302225, 0.7544065, 0, 0, 0)
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1000895160]
+environment = SubResource("Environment_vonw3")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=555938418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+omni_range = 12.0
+omni_attenuation = 0.5
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=2065913274]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 5, 0)
+omni_range = 12.0
+omni_attenuation = 0.5
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=730782624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 5, 0)
+omni_range = 12.0
+omni_attenuation = 0.5
